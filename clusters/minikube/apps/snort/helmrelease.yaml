@@ -1,0 +1,25 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: &app snort
+  namespace: flux-system
+spec:
+  releaseName: *app
+  serviceAccountName: helm-controller
+  targetNamespace: snort
+  chart:
+    spec:
+      chart: snort
+      version: 5.5.15
+      sourceRef:
+        kind: HelmRepository
+        name: snort
+        namespace: flux-system
+  interval: 10m0s
+  install:
+    remediation:
+      retries: 5
+  upgrade:
+    remediation:
+      retries: 5

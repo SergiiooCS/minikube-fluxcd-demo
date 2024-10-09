@@ -1,0 +1,8 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: snort
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  url: https://raw.githubusercontent.com/snort3/snort3_aws/main/helm/snort3-ips
