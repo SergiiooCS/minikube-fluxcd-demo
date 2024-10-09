@@ -7,5 +7,4 @@ resources:
   # - helmrelease.yaml
   - namespace.yaml
   - https://github.com/snort3/snort3/releases/download/3.3.7.0/snort3-ips.yaml
-patchesStrategicMerge:
   - snort3-values.yaml
