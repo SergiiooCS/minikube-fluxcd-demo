@@ -1,0 +1,8 @@
+snort3Image:
+  repository: chxdeng/snort
+  pullPolicy: Always
+  tag: "latest"
+managerImage:
+  repository: chxdeng/manager
+  pullPolicy: Always
+  tag: "latest"

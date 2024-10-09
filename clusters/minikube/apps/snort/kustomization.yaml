@@ -3,5 +3,9 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - helm-repository.yaml
-  - helmrelease.yaml
+  # - helm-repository.yaml
+  # - helmrelease.yaml
+  - namespace.yaml
+  - https://github.com/snort3/snort3/releases/download/3.3.7.0/snort3-ips.yaml
+patches:
+  - snort3-values.yaml
